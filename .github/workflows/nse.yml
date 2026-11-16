@@ -1,8 +1,8 @@
 name: NSE daily prices
 on:
   schedule:
-    - cron: '47 14,15,16 * * *'
-    - cron: '47 2 * * *'
+    - cron: '47 14,15,16 * * 1-5'
+    - cron: '47 2 * * 1-5'
   workflow_dispatch:
 permissions:
   contents: read
