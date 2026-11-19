@@ -19,14 +19,14 @@ concurrency:
   cancel-in-progress: false
 jobs:
   collect:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 40
     env:
       COLLECTOR_APP_URL: ${{ vars.COLLECTOR_APP_URL }}
       CATCHUP_START: '2026-10-31'
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: '3.12'
       - run: pip install 'nse==5.1.3'
