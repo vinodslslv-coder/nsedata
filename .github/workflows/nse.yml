@@ -16,8 +16,7 @@ jobs:
     runs-on: ubuntu-24.04
     timeout-minutes: 40
     env:
-      COLLECTOR_APP_URL: ${{ vars.COLLECTOR_APP_URL }}
-      CATCHUP_START: '2026-10-31'
+      COLLECTOR_APP_URL: ${{ vars.COLLECTOR_APP_URL }}      
     steps:
       - uses: actions/checkout@v5
       - uses: actions/setup-python@v6
